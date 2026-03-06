@@ -17,10 +17,10 @@ function getNombre(){
     return $this->nombre;
 
 }
-function setNombre(){
+function setNombre($nombre){
     $this->nombre = $this->$nombre;
 }
-function setCorreo(){
+function setCorreo($correo){
     $this->correo = $this->$correo;
 }
 }
