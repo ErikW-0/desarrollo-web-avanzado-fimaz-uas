@@ -14,6 +14,6 @@ La clase incluye:
 
 • Instrucciones de ejecución
 Ejecutar el archivo index.php en un servidor local mandando a llamar la clase Usuario con un "include".
-Abrir el navegador y acceder al archivo `index.php`.
+Abrir el navegador y acceder al archivo index.php.
  El programa mostrará en pantalla el nombre y correo del usuario utilizando los métodos getters de la clase.
 
