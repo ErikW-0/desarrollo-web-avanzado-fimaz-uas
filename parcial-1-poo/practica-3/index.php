@@ -1,6 +1,6 @@
 <?php
-require_once "Alumno.php";
-require_once "admin.php";
+require_once "clases/Admin.php";
+require_once "clases/Alumno.php";
 
 try {
     $objadmin1 = new Admin("erikwr3@gmail.com", "Erik Watson");
