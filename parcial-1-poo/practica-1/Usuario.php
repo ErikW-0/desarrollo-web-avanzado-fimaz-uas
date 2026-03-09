@@ -1,3 +1,7 @@
+//**  
+* The class Usuario in PHP defines a user with properties for name and email, along with getter and
+* setter methods. 
+*//
 <?php
 class Usuario{
     private $nombre;
