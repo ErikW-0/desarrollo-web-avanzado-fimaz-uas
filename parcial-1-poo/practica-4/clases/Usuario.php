@@ -21,12 +21,6 @@ function getNombre(){
     return $this->nombre;
 
 }
-function setNombre($nombre){
-    $this->nombre = $this->$nombre;
-}
-function setCorreo($correo){
-    $this->correo = $this->$correo;
-}
 }
 ?>
 
