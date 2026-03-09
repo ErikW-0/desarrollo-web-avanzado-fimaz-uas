@@ -9,9 +9,7 @@ require_once 'Usuario.php';
     }
 public function getEmpresa(){
         return $this->empresa;
- }
- public function setEmpresa($empresa){
-     return $this->empresa = $empresa;
+ 
  }
 public function getRol(){
     return "invitado";
