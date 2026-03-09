@@ -1,5 +1,5 @@
 <?php
-require_once "Usuario.php";
+require_once "Alumno.php";
 require_once "admin.php";
 
 try {
@@ -8,7 +8,7 @@ try {
     echo"nombre:". $objadmin1->getNombre() . "<br>";
     echo"rol:" . $objadmin1->getRol() . "<br><br>";
 
-    $objAlumno1 = new Alumno("correoprueba@gmail", "UsuarioPrueba", "12345678");
+    $objAlumno1 = new Alumno("correoprueba@gmail.com", "UsuarioPrueba", "12345678");
     echo "correo:" . $objAlumno1->getCorreo() . "<br>";
     echo "nombre:". $objAlumno1->getNombre() . "<br>";
     echo "rol:" . $objAlumno1->getRol() . "<br>";
@@ -19,3 +19,4 @@ try {
 }catch(Exception $e){
     echo "Error" . $e->getMessage();
 }
+?>
