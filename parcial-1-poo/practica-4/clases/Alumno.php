@@ -13,10 +13,6 @@ class Alumno extends Usuario {
     public function getMatricula(){
         return $this->matricula;
     }
-     public function setMatricula($matricula){
-        return $this->matricula;
-     }
-
     public function getRol(){
         return "Alumno";
     }
