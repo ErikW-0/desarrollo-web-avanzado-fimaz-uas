@@ -7,14 +7,14 @@ class Usuario{
         if(!filter_var($vCorreo, FILTER_VALIDATE_EMAIL)){
             throw new Exception("El correo no tiene un formato valido");
         }
-        $this->nombre = $vNombre;
-        $this->correo = $vCorreo;
+        $this->vNombre = $vNombre;
+        $this->vCorreo = $vCorreo;
     }
     public function getNombre(){
-        return $this->nombre;
+        return $this->vNombre;
     }
     public function getCorreo(){
-        return $this->correo;
+        return $this->vCorreo;
     }
 }
 ?>
