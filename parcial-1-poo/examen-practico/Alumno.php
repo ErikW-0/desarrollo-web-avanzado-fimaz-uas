@@ -1,7 +1,7 @@
 <?php
 include_once "Usuario.php";
 
-class Aumno extends Usuario{
+class Alumno extends Usuario{
     private $vMatricula;
     public function __construct($vNombre, $vCorreo, $vMatricula){
         parent::__construct($vNombre, $vCorreo);
