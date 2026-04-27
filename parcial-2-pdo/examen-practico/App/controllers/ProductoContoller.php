@@ -1,6 +1,6 @@
 <?php
 // Watson Rosales Jesus Erik
-namespace App\controllers;
+namespace App\Controllers;
 
 use App\Config\Database;
 use App\Models\Producto;

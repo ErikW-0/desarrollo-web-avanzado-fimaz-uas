@@ -1,6 +1,6 @@
 <?php
 // Watson Rosales Jesus Erik
-namespace App\config;
+namespace App\Config;
 
 use PDO;
 use PDOException;
