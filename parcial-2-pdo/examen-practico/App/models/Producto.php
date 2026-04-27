@@ -1,7 +1,7 @@
 <?php
-// Watson Rosales Jesus Erik 
-namespace App\models;
+// Watson Rosales Jesus Erik// 
 
+namespace App\models;
 class Producto {
     private $id;
     private $nombre;
