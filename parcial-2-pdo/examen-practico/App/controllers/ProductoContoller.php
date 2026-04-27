@@ -1,5 +1,4 @@
 <?php
-// Watson Rosales Jesus Erik
 namespace App\Controllers;
 
 use App\Config\Database;
@@ -21,7 +20,7 @@ class ProductoController {
             $stmt = $this->connection->prepare($sql);
             $stmt->bindValue(':nombre', $producto->getNombre());
             $stmt->bindValue(':descripcion', $producto->getDescripcion());
-            $stmt->bindValue(':existencia', $producto->getExistencias(), PDO::PARAM_INT);
+            $stmt->bindValue(':existencias', $producto->getExistencias(), PDO::PARAM_INT);
             $stmt->bindValue(':precio', $producto->getPrecio());
             return $stmt->execute();
         } catch (PDOException $e) {
@@ -62,7 +61,7 @@ class ProductoController {
             $stmt->bindValue(':id', $producto->getId(), PDO::PARAM_INT);
             $stmt->bindValue(':nombre', $producto->getNombre());
             $stmt->bindValue(':descripcion', $producto->getDescripcion());
-            $stmt->bindValue(':existencia', $producto->getExistencias(), PDO::PARAM_INT);
+            $stmt->bindValue(':existencias', $producto->getExistencias(), PDO::PARAM_INT);
             $stmt->bindValue(':precio', $producto->getPrecio());
             return $stmt->execute();
         } catch (PDOException $e) {

@@ -6,8 +6,8 @@ spl_autoload_register(function ($clase) {
     }
 });
 
-use App\controllers\ProductoController;
-use App\models\Producto;
+use App\Controllers\ProductoController;
+use App\Models\Producto;
 
 $controller = new ProductoController();
 $mensaje = "";
@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = !empty($_POST['id']) ? $_POST['id'] : null;
     $nombre = trim($_POST['nombre']);
     $descripcion = trim($_POST['descripcion']);
-    $existencia = (int) $_POST['existencias'];
+    $existencias = (int) $_POST['existencias'];
     $precio = (float) $_POST['precio'];
 
     $producto = new Producto();
