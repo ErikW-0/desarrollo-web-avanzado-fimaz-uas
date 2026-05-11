@@ -1,6 +1,6 @@
 <?php
     require_once("../admin/template/header.php");
-    require_once("../../controllers/torneosController.php");
+    require_once("../../controllers/torneosControllers.php");
 
     // Capturamos el ID que viene por la URL
     $id = $_GET['id'];
@@ -17,8 +17,8 @@
             <form action="torneosInsert.php" method="post">
                 
                 <div class="mb-3">
-                    <label for="nombreTorneo" class="form-label">NOMBRE DEL TORNEO (ID: <?= $lstTorneo['id'] ?>)</label>
-                    <input type="text" class="form-control" name="txtNombreTorneo" id="nombreTorneo" value="<?= $lstTorneo['nombreTorneo'] ?>" readonly>
+                    <label for="nombre_torneo" class="form-label">NOMBRE DEL TORNEO (ID: <?= $lstTorneo['id_torneo'] ?>)</label>
+                    <input type="text" class="form-control" name="txtnombre_torneo" id="nombre_torneo" value="<?= $lstTorneo['nombre_torneo'] ?>" readonly>
                 </div>
 
                 <div class="mb-3">
@@ -62,8 +62,8 @@
                         <input type="text" name="txtPremio3" id="premio3" class="form-control" value="<?= $lstTorneo['premio3'] ?>" readonly>
                     </div>
                     <div class="col mb-3">
-                        <label for="otroPremio" class="form-label">OTRO PREMIO (CAMPEÓN CANASTERO)</label>
-                        <input type="text" name="txtOtroPremio" id="otroPremio" class="form-control" value="<?= $lstTorneo['otroPremio'] ?>" readonly>
+                        <label for="otro_premio" class="form-label">OTRO PREMIO (CAMPEÓN CANASTERO)</label>
+                        <input type="text" name="txtotro_premio" id="otro_premio" class="form-control" value="<?= $lstTorneo['otro_premio'] ?>" readonly>
                     </div>
                 </div>
 
@@ -74,7 +74,7 @@
                     </div>
                     <div class="col mb-3">
                         <label for="contrasena" class="form-label">CONTRASEÑA</label>
-                        <input type="text" name="txtContrasena" id="contraseña" class="form-control" value="<?= $lstTorneo['contraseña'] ?>" readonly>
+                        <input type="text" name="txtContrasena" id="contrasena" class="form-control" value="<?= $lstTorneo['contrasena'] ?>" readonly>
                     </div>
                 </div>
                     <div class="col-12">

@@ -28,9 +28,9 @@
                     <div class="card-header">
                         LISTA DE TORNEOS
                     </div>
-                    div class="card-body">
-            <a href="read_all_torneos.php" class="btn btn-primary">
-                <img src="../img/lista-torneo.png" alt="Lista de torneos." width="180" height="180">
+                    <div class="card-body">
+            <a href="readAllTorneos.php" class="btn btn-primary">
+                <img src="../img/lista-torneo.jpg" alt="Lista de torneos." width="180" height="180">
                         </a>
                     </div>
                 </div>

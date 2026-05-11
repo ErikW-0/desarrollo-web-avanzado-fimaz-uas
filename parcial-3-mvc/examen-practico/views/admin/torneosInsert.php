@@ -1,5 +1,6 @@
 <?php
-require_once("../../controllers/torneosController.php");
+require_once("../../controllers/torneosControllers.php");
+
 
 $nombreTorneo = $_POST['txtNombreTorneo'];
 $organizador = $_POST['txtOrganizador'];
@@ -11,9 +12,12 @@ $premio2 = $_POST['txtPremio2'];
 $premio3 = $_POST['txtPremio3'];
 $otroPremio = $_POST['txtOtroPremio'];
 $usuario = $_POST['txtUsuario'];
-$contraseña = $_POST['txtContraseña'];
+
+$contrasena = $_POST['txtContrasena']; 
 
 $objController = new torneosController();
+
+
 $objController->saveTorneo(
     $nombreTorneo, 
     $organizador, 
@@ -23,7 +27,8 @@ $objController->saveTorneo(
     $premio1, 
     $premio2, 
     $premio3,  
+    $otroPremio, 
     $usuario, 
-    $contraseña
+    $contrasena
 );
 ?>
