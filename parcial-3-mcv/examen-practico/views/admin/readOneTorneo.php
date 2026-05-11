@@ -77,7 +77,7 @@
                         <input type="text" name="txtContrasena" id="contraseña" class="form-control" value="<?= $lstTorneo['contraseña'] ?>" readonly>
                     </div>
                 </div>
-                    <div class="colo-12">
+                    <div class="col-12">
                         <a href="readAlltorneos.php" class="btn btn-success">REGRESAR</a>
                 </div>
                 </div>
