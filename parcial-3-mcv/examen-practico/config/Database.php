@@ -2,8 +2,8 @@
 // Watson Rosales Jesus Erik
 class Database {
     private $host = "localhost";
-    private $dbname = "db_ew";
-    private $username = "root";
+    private $db = "db_ew";
+    private $user = "root";
     private $password = "";
     private $connection;
 
