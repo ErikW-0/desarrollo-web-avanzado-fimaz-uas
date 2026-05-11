@@ -41,14 +41,21 @@ class torneosModel {
     }
 
     public function read() {
-    $statement = $this->pdo->prepare("SELECT * FROM torneos");
+        $statement = $this->PDO->prepare("SELECT * FROM torneos");
     
-    if ($statement->execute()) {
-        return $statement->fetchAll();
-    } else {
-        return false;
+        if ($statement->execute()) {
+            return $statement->fetchAll();
+        } else {
+            return false;
+        }
     }
-}
+
+    public function readOne($id) {
+    $statement = $this->PDO->prepare("SELECT * FROM torneos WHERE id_torneo = :id LIMIT 1");
+    $statement->bindParam(":id", $id);
+    
+    return ($statement->execute()) ? $statement->fetch() : false;
+    }
 }
 
 ?>

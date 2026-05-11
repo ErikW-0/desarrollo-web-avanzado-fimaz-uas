@@ -20,7 +20,10 @@ class torneosController {
     public function readTorneos() {
     $model = new torneosModel();
     return ($model->read() != false) ? $model->read() : false;
-}
+    }
+        public function readOneTorneo($id) {
+    return ($this->model->readOne($id) != false) ? $this->model->readOne($id) : header("Location: admin.php");
+    }
 }
 
 ?>
