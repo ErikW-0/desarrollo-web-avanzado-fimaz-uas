@@ -84,6 +84,12 @@ class torneosModel {
 
     return $statement->execute();
 }
+public function delete($id) {
+    $statement = $this->PDO->prepare("DELETE FROM torneos WHERE id_torneo = :id");
+    $statement->bindParam(":id", $id);
+    
+    return ($statement->execute()) ? true : false;
+    }
 }
 
 ?>

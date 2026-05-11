@@ -25,13 +25,34 @@
                     <?php foreach ($rows as $row): ?>
                         <tr>
                             <th><?= $row['id_torneo'] ?></th>
-                            <td><?= $row['nombre_torneo'] ?></td>
-                            <td><?= $row['organizador'] ?></td>
-                            <td>
+                            <th><?= $row['nombre_torneo'] ?></th>
+                            <th><?= $row['organizador'] ?></th>
+                            <th>
                                 ACCIONES: EDITAR, ELIMINAR.
                                 <a href="readOneTorneo.php?id=<?= $row['id'] ?>" class="btn btn-primary">Consultar</a>
                                 <a href="updateTorneo.php?id=<?= $row['id'] ?>" class="btn btn-primary">Editar</a>
-                            </td>
+                                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#idModal<?= $row['id'] ?>">
+                                        Eliminar
+                                    </button>
+
+                                    <div class="modal fade" id="idModal<?= $row['id'] ?>" tabindex="-1" aria-labelledby="Modal<?= $row['id'] ?>" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="Modal<?= $row['id'] ?>">Desea eliminar el torneo?</h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    esta accion no se puede deshacer...
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                                    <a href="deleteTorneo.php?id=<?= $row['id'] ?>" class="btn btn-danger">Eliminar</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </th>
                         </tr>
                     <?php endforeach; ?>
                 <?php else: ?>
