@@ -3,13 +3,13 @@
     require_once("../admin/template/header.php");
     require_once("../../controllers/torneosControllers.php");
 
-    // Capturamos el ID que viene por la URL
+    
     $id = isset($_GET['id']) ? $_GET['id'] : null;
 
     $objController = new torneosController();
     $lstTorneo = $objController->readOneTorneo($id);
 
-    // Si no encuentra el torneo, evitamos que la página rompa
+    
     if (!$lstTorneo) {
         echo "<script>alert('Torneo no encontrado para editar'); window.location='readAllTorneos.php';</script>";
         exit;
