@@ -10,12 +10,14 @@ class Database {
     public function __construct() {
         
     }
-    public function connect(){
-        try {
-            $PDO = new PDO("mysql:host=".$this->host.";dbname=".$this->db, $this->user, $this->password);
-        } catch (PDOException $e) {
-            return $e->getMessage();
-        }
+    public function connect() {
+    try {
+       
+        $this->connection = new PDO("mysql:host=".$this->host.";dbname=".$this->db, $this->user, $this->password);
+        return $this->connection; 
+    } catch (PDOException $e) {
+        die("Error de conexión: " . $e->getMessage());
     }
+}
 }    
 ?>
