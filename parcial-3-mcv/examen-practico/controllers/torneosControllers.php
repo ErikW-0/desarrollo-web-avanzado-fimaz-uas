@@ -16,6 +16,11 @@ class torneosController {
 
         return ($id != false) ? header("Location: admin.php") : header("Location: frmTorneos.php");
     }
+
+    public function readTorneos() {
+    $model = new torneosModel();
+    return ($model->read() != false) ? $model->read() : false;
+}
 }
 
 ?>

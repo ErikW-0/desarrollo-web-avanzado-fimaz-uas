@@ -16,7 +16,7 @@ class torneosModel {
         $statement = $this->PDO->prepare("INSERT INTO torneos VALUES(null, :nombreTorneo, :organizador, :patrocinadores, :sede, :categoria, :premio1, :premio2, :premio3, :otroPremio, :usuario, :contraseña)");
 
         $contraseña = $this->passwordEncrypt($contraseña);
-        
+
         $statement->bindParam(":nombreTorneo", $nombreTorneo);
         $statement->bindParam(":organizador", $organizador);
         $statement->bindParam(":patrocinadores", $patrocinadores);
@@ -39,6 +39,16 @@ class torneosModel {
     public function passwordDEncrypted($passwordEncrypted, $passwordCandidate){
         return (password_verify($passwordCandidate, $passwordEncrypted)) ? true : false;
     }
+
+    public function read() {
+    $statement = $this->pdo->prepare("SELECT * FROM torneos");
+    
+    if ($statement->execute()) {
+        return $statement->fetchAll();
+    } else {
+        return false;
+    }
+}
 }
 
 ?>
