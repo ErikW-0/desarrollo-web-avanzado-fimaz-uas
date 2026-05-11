@@ -10,9 +10,9 @@ class torneosController {
         $this->model = new torneosModel();
     }
 
-    public function saveTorneo($nombreTorneo, $organizador, $patrocinadores, $sede, $categoria, $premio1, $premio2, $premio3, $usuario, $contrasena) {
+    public function saveTorneo($nombreTorneo, $organizador, $patrocinadores, $sede, $categoria, $premio1, $premio2, $premio3, $usuario, $contraseña) {
 
-        $id = $this->model->insert($nombreTorneo, $organizador, $patrocinadores, $sede, $categoria, $premio1, $premio2, $premio3, $usuario, $contrasena);
+        $id = $this->model->insert($nombreTorneo, $organizador, $patrocinadores, $sede, $categoria, $premio1, $premio2, $premio3,  $usuario, $contraseña);
 
         return ($id != false) ? header("Location: admin.php") : header("Location: frmTorneos.php");
     }
@@ -24,6 +24,16 @@ class torneosController {
         public function readOneTorneo($id) {
     return ($this->model->readOne($id) != false) ? $this->model->readOne($id) : header("Location: admin.php");
     }
+    public function updateTorneo($id, $nombre, $organizador, $pat, $sede, $cat, $p1, $p2, $p3, $otroPremio) {
+    $resultado = $this->model->update($id, $nombre, $organizador, $pat, $sede, $cat, $p1, $p2, $p3, $otroPremio);
+    
+    if ($resultado != false) {
+        header("Location: readOneTorneos.php?id=" . $id);
+    } else {
+        
+        header("Location: readAlltorneos.php"   );
+    }
+}
 }
 
 ?>
