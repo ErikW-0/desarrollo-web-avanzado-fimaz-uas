@@ -1,6 +1,6 @@
 <?php
     require_once("../admin/template/header.php");
-    require_once("../../controllers/torneosController.php");
+    require_once("../../controllers/torneosControllers.php");
 
     $objTorneosController = new torneosController();
     $rows = $objTorneosController->readTorneos();
