@@ -1,4 +1,5 @@
 <?php
+// Watson Rosales Jesus Erik
 require_once("../../config/DataBase.php");
 
 class torneosModel {
@@ -33,24 +34,21 @@ class torneosModel {
         return ($statement->execute()) ? $this->PDO->lastInsertId() : false;
     }
 
-    // --- NUEVOS MÉTODOS PARA SOLUCIONAR EL ERROR ---
-
-    // Obtener todos los torneos (El que te está dando el error actual)
+    
     public function read() {
-        $sql = "SELECT * FROM torneos ORDER BY id_torneo DESC"; // Ajusta 'id_torneo' según tu PK
+        $sql = "SELECT * FROM torneos ORDER BY id_torneo DESC"; 
         $statement = $this->PDO->prepare($sql);
         return ($statement->execute()) ? $statement->fetchAll() : false;
     }
 
-    // Obtener un solo torneo por ID
-    public function readOne($id) {
+        public function readOne($id) {
         $sql = "SELECT * FROM torneos WHERE id_torneo = :id LIMIT 1";
         $statement = $this->PDO->prepare($sql);
         $statement->bindParam(":id", $id);
         return ($statement->execute()) ? $statement->fetch() : false;
     }
 
-    // Actualizar torneo
+   
     public function update($id, $nombre, $organizador, $pat, $sede, $cat, $p1, $p2, $p3, $otroPremio) {
         $sql = "UPDATE torneos SET nombre_torneo=:nombre, organizador=:org, patrocinadores=:pat, 
                 sede=:sede, categoria=:cat, premio1=:p1, premio2=:p2, premio3=:p3, otroPremio=:otro 
@@ -71,7 +69,7 @@ class torneosModel {
         return ($statement->execute()) ? true : false;
     }
 
-    // Eliminar torneo
+   
     public function delete($id) {
         $sql = "DELETE FROM torneos WHERE id_torneo = :id";
         $statement = $this->PDO->prepare($sql);

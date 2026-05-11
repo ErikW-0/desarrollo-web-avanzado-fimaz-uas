@@ -1,5 +1,5 @@
 <?php
-
+// Watson Rosales Jesus Erik
 require_once("../../models/torneosModel.php");
 
 class torneosController {
