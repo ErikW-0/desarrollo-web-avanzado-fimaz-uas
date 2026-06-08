@@ -1,0 +1,5 @@
+# Ignorar todo el contenido de la carpeta uploads
+/uploads/*
+
+# Pero no ignorar el archivo .gitkeep para mantener la carpeta en el repositorio
+!/uploads/.gitkeep
